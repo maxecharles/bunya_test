@@ -9,11 +9,15 @@
 #SBATCH --account=a_astro
 #SBATCH -o slurm.out
 #SBATCH -e slurm.error
+#SBATCH --mail-user=max.charles@sydney.edu.au
+#SBATCH --mail-type=BEGIN,END
 
 # Load the necessary modules
 module load miniconda3/23.9.0-0
 source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
+# Activate conda environment
 conda activate dLux
 
+# Execute your Python script
 srun /scratch/user/uqldesdo/max/repos/bunya_test/printing.py > output.txt

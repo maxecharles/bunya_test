@@ -13,7 +13,7 @@
 #SBATCH --mail-type=BEGIN,END
 
 # Load the necessary modules
-module load miniconda3/23.9.0-0
+module load anaconda3/23.9.0-0
 source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
 # Activate conda environment

@@ -9,11 +9,13 @@
 #SBATCH --account=a_astro
 #SBATCH -o slurm.out
 #SBATCH -e slurm.error
+#SBATCH --mail-user=max.charles@sydney.edu.au
+#SBATCH --mail-type=BEGIN,END
 
 # Load the necessary modules
-module load anaconda3/2022.05
+module load anaconda3
 source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
-conda activate dLux
+conda activate dlux
 
-srun /scratch/user/uqbpope/code/asimov/scripts/dlux_test.py > allcores.txt
+srun /scratch/user/uqmchar4/asimov/scripts/dlux_test.py > allcores.txt

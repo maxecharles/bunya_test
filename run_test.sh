@@ -10,7 +10,8 @@
 #SBATCH -o slurm.out
 #SBATCH -e slurm.error
 #SBATCH --mail-user=max.charles@sydney.edu.au
-#SBATCH --mail-type=BEGIN,END
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
 
 # Load the necessary modules
 module load anaconda3
@@ -20,4 +21,4 @@ source $EBROOTANACONDA3/etc/profile.d/conda.sh
 conda activate dlux
 
 # Execute your Python script
-srun python /scratch/user/uqmchar4/code/bunya_test/scripts/printing.py > output.txt
+srun python /scratch/user/uqmchar4/code/bunya_test/scripts/printing.py 5 > output.txt

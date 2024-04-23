@@ -10,7 +10,8 @@
 #SBATCH -o slurm.out
 #SBATCH -e slurm.error
 #SBATCH --mail-user=max.charles@sydney.edu.au
-#SBATCH --mail-type=BEGIN,END
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
 
 # Load the necessary modules
 module load anaconda3

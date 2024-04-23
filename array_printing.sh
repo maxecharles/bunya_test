@@ -3,13 +3,13 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=2000000M
-#SBATCH --job-name=test
+#SBATCH --job-name=array_test
 #SBATCH --time=0:01:00
 #SBATCH --partition=general
 #SBATCH --account=a_astro
 #SBATCH -o slurm.out
 #SBATCH -e slurm.error
-#SBATCH --mail-user=max.charles@sydney.edu.au
+#SBATCH --mail-user=max.charles@uq.edu.au
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
 #SBATCH --array=0-9

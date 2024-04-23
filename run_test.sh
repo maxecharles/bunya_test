@@ -17,7 +17,7 @@ module load anaconda3
 source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
 # Activate conda environment
-conda activate dLux
+conda activate dlux
 
 # Execute your Python script
-srun /scratch/user/uqldesdo/max/repos/bunya_test/printing.py > output.txt
+srun python /scratch/user/uqmchar4/bunya_test/printing.py > output.txt

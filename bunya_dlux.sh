@@ -18,4 +18,4 @@ source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
 conda activate dlux
 
-srun /scratch/user/uqmchar4/asimov/scripts/dlux_test.py > allcores.txt
+srun /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py > allcores.txt

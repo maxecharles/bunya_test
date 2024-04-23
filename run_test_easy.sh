@@ -20,4 +20,4 @@ source $EBROOTANACONDA3/etc/profile.d/conda.sh
 conda activate dlux
 
 # Execute your Python script
-srun python /scratch/user/uqmchar4/bunya_test/scripts/printing_easy.py > output.txt
+srun python /scratch/user/uqmchar4/code/bunya_test/scripts/printing_easy.py > output.txt

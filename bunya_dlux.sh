@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=96
 #SBATCH --mem=2000000M
 #SBATCH --job-name=test
-#SBATCH --time=1:00:00
+#SBATCH --time=0:01:00
 #SBATCH --partition=general
 #SBATCH --account=a_astro
 #SBATCH -o slurm.out
@@ -18,4 +18,4 @@ source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
 conda activate dlux
 
-srun /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py > allcores.txt
+srun python /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py > allcores.txt

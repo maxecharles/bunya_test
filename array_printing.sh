@@ -1,7 +1,7 @@
 #!/bin/bash --login
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=96
+#SBATCH --cpus-per-task=8
 #SBATCH --mem=2000000M
 #SBATCH --job-name=test
 #SBATCH --time=0:01:00
@@ -12,11 +12,14 @@
 #SBATCH --mail-user=max.charles@sydney.edu.au
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
+#SBATCH --array=0-9
 
 # Load the necessary modules
 module load anaconda3
 source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
+# Activate conda environment
 conda activate dlux
 
+# Execute your Python script
 srun python /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py $SLURM_ARRAY_TASK_ID > outputs/print_$SLURM_ARRAY_TASK_ID.txt

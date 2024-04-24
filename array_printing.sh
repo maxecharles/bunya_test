@@ -22,4 +22,4 @@ source $EBROOTANACONDA3/etc/profile.d/conda.sh
 conda activate dlux
 
 # Execute your Python script
-srun python /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py $SLURM_ARRAY_TASK_ID > outputs/print_$SLURM_ARRAY_TASK_ID.txt
+srun python /scratch/user/uqmchar4/code/asimov/scripts/printing.py $SLURM_ARRAY_TASK_ID > outputs/print_$SLURM_ARRAY_TASK_ID.txt

@@ -19,4 +19,4 @@ source $EBROOTANACONDA3/etc/profile.d/conda.sh
 
 conda activate dlux
 
-srun python /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py $SLURM_ARRAY_TASK_ID > outputs/print_$SLURM_ARRAY_TASK_ID.txt
+srun python /scratch/user/uqmchar4/code/asimov/scripts/dlux_test.py > allcores.txt

@@ -7,8 +7,8 @@
 #SBATCH --time=0:01:00
 #SBATCH --partition=general
 #SBATCH --account=a_astro
-#SBATCH -o slurm.out
-#SBATCH -e slurm.error
+#SBATCH -o outputs/slurm.out
+#SBATCH -e outputs/slurm.error
 #SBATCH --mail-user=max.charles@uq.edu.au
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
